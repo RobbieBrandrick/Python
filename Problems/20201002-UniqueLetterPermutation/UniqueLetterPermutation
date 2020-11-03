@@ -1,0 +1,22 @@
+word = "abcdefg"
+
+result = []
+
+for i in range(0, len(word)):
+	
+	if i == 0:
+		result.append(word[i])
+		continue
+	
+	newResults = []	
+				
+	for r in result:
+		for j in range(0, len(r) + 1):
+			
+			newResult = r[0:j] + word[i] + r[j:]
+			
+			newResults.append(newResult)
+		
+	result += newResults
+		
+print(result)
